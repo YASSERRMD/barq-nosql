@@ -1,4 +1,5 @@
 use crate::engine::BarqEngine;
+use crate::handlers::transactions::*;
 use crate::handlers::*;
 use axum::{
     routing::{delete, get, post, put},
@@ -10,6 +11,11 @@ pub fn router(engine: Arc<BarqEngine>) -> Router {
     Router::new()
         .route("/health", get(health_handler))
         .route("/metrics", get(metrics_handler))
+        .route("/transactions", post(begin_txn))
+        .route("/transactions/:id/write", post(write_txn))
+        .route("/transactions/:id/read", post(read_txn))
+        .route("/transactions/:id/commit", post(commit_txn))
+        .route("/transactions/:id", delete(abort_txn))
         .route("/collections", get(list_collections_handler))
         .route("/collections", post(create_collection_handler))
         .route("/collections/:name", delete(drop_collection_handler))

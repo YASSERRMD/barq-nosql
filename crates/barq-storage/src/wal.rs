@@ -11,6 +11,7 @@ pub enum WalOp {
     Insert,
     Update,
     Delete,
+    TxnBatch(u64),
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
