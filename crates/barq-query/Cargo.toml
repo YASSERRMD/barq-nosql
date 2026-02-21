@@ -1,0 +1,13 @@
+[package]
+name = "barq-query"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+barq-core = { path = "../barq-core" }
+barq-storage = { path = "../barq-storage" }
+barq-index = { path = "../barq-index" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }

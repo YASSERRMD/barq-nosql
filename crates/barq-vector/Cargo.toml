@@ -1,0 +1,13 @@
+[package]
+name = "barq-vector"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+barq-core = { path = "../barq-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+rand = { workspace = true }
+dashmap = { workspace = true }

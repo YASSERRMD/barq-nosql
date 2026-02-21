@@ -1,0 +1,16 @@
+[package]
+name = "barq-graph"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+barq-core = { path = "../barq-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+dashmap = { workspace = true }
+uuid = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+
+[dev-dependencies]
+tempfile = "3"

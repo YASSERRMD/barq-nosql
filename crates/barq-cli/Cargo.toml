@@ -1,0 +1,19 @@
+[package]
+name = "barq-cli"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "barq-cli"
+path = "src/main.rs"
+
+[dependencies]
+barq-core = { path = "../barq-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { workspace = true }
+clap = { workspace = true }
+colored = "2"
+anyhow = { workspace = true }
+uuid = { workspace = true }

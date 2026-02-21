@@ -1,0 +1,17 @@
+[package]
+name = "barq-bench"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+barq-core = { path = "../crates/barq-core" }
+barq-storage = { path = "../crates/barq-storage" }
+barq-index = { path = "../crates/barq-index" }
+barq-vector = { path = "../crates/barq-vector" }
+criterion = { workspace = true }
+tokio = { workspace = true }
+rand = { workspace = true }
+
+[[bench]]
+name = "throughput"
+harness = false
